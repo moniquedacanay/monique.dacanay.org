@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 body, html {
@@ -17,6 +18,44 @@ body, html {
 
 .w3-bar .w3-button {
     padding: 16px;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .content-2017 {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+
+  .collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 </style>
 <body>
@@ -59,13 +98,23 @@ body, html {
 <!--Allows images stay to the side-->
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">ABOUT ME!</h1>
-      <p>Hello! My name is Monique Dacanay. I was born in Raleigh, North Carolina. I am 15 years old and I study at Leesville Road High School. I have been in the Leesville schools from elementary to high school! I am a rising 10th grader. Next semester, I will be  taking PreCalculus, Advance Orchestra, Chemistry, and AP Psychology. In school, I am involved in Key Club, Speech and Debate, Book Club, and FCA. I love swimming, playing badminton, playing the violin, drawing, making crafts, and much more! </p>
-      <br>
-	  <p>In my free time, I enjoy playing the violin. Right now, I am playing two pieces, 	by Bach, Giga and Gavotte en Rondeau. Playing the violin is so much fun, and it is a way to take all the stress away. I am a part of the Raleigh Community Orchestra, and I also volunteer to help tutor the 6th grade orchestra after school. Last year I got in All State, which was a really cool experience, to be able to play with the best of the best. </p>
-      <br>
-      <p>I also love spending time with my family. I have a big brother named Michael. Together, as a family, we like to play board games, like Pictionary, watch movies, cook together, and more. In addition, we love traveling. I have been to China, Canada, and the Philippines. Locally, I have visited New York, New Jersey, Pennsylvania, Maryland, Washington D.C., Virginia, Tennessee, South Carolina, Georgia, Florida, Nevada, and California. </p>
-      <br>
-      <p>At Shodor, I am an apprentice for the 2017-2018 year. I joined Shodor to gain more knowledge about computational science and essential office and life skills. I enjoy going to Shodor. It is very fun, because I not only get to spend time with my fellow apprentices, but I also have opportunities, to model, make websites, use different and new languages and softwares, like HTML, CSS, PHP, Java Script, MySQL, AgentCubes, Vensim, and more!</p>
+
+
+      <p>2022 </p>
+      <p>Hi! My name is Monique Armelle Zulueta Dacanay. I was born and raised in Raleigh, North Carolina. I am a Cheatham-White Scholar, majoring in Biomedical Sciences and minoring in Spanish at North Carolina Central University as well as a Monica Chibuogu Nneji Foundation (MCNF), and NSHSS STEAM Scholar. I love swimming, playing badminton, playing the violin, drawing, making crafts, and much more!</p>
+
+
+      <button type="button" class="collapsible">2017</button>
+      <div class="content-2017">
+        <p>Hello! My name is Monique Armelle Zulueta Dacanay. I was born in Raleigh, North Carolina. I am 15 years old and I study at Leesville Road High School. I have been in the Leesville schools from elementary to high school! I am a rising 10th grader. Next semester, I will be  taking PreCalculus, Advance Orchestra, Chemistry, and AP Psychology. In school, I am involved in Key Club, Speech and Debate, Book Club, and FCA. I love swimming, playing badminton, playing the violin, drawing, making crafts, and much more! </p>
+        <br>
+        <p>In my free time, I enjoy playing the violin. Right now, I am playing two pieces, 	by Bach, Giga and Gavotte en Rondeau. Playing the violin is so much fun, and it is a way to take all the stress away. I am a part of the Raleigh Community Orchestra, and I also volunteer to help tutor the 6th grade orchestra after school. Last year I got in All State, which was a really cool experience, to be able to play with the best of the best. </p>
+        <br>
+        <p>I also love spending time with my family. I have a big brother named Michael. Together, as a family, we like to play board games, like Pictionary, watch movies, cook together, and more. In addition, we love traveling. I have been to China, Canada, and the Philippines. Locally, I have visited New York, New Jersey, Pennsylvania, Maryland, Washington D.C., Virginia, Tennessee, South Carolina, Georgia, Florida, Nevada, and California. </p>
+        <br>
+        <p>At Shodor, I am an apprentice for the 2017-2018 year. I joined Shodor to gain more knowledge about computational science and essential office and life skills. I enjoy going to Shodor. It is very fun, because I not only get to spend time with my fellow apprentices, but I also have opportunities, to model, make websites, use different and new languages and softwares, like HTML, CSS, PHP, Java Script, MySQL, AgentCubes, Vensim, and more!</p>
+      </div>
+      
     </div>
     
 
@@ -128,6 +177,7 @@ function w3_close() {
     mySidebar.style.display = "none";
 }
 </script>
+<script src="myTemplate/js/myscripts.js"></script>
 
 
 </body>
