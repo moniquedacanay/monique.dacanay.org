@@ -1,0 +1,160 @@
+{UTF-8}
+decrease in rabbits=
+	rabbit death factor*rabbits*Wolves
+	~	
+	~		|
+
+decrease in wolves=
+	wolf death factor*Wolves
+	~	
+	~		|
+
+increase in rabbits=
+	rabbit birth factor*rabbits
+	~	
+	~		|
+
+increase in wolves=
+	wolf birth factor*rabbits*Wolves
+	~	
+	~		|
+
+rabbit birth factor=
+	0.05
+	~	 [0,0.5,0.01]
+	~		|
+
+rabbit death factor=
+	0.01
+	~	 [0,0.05,0.001]
+	~		|
+
+rabbits= INTEG (
+	increase in rabbits-decrease in rabbits,
+		20)
+	~	
+	~		|
+
+wolf birth factor=
+	0.01
+	~	 [0,0.05,0.001]
+	~		|
+
+wolf death factor=
+	0.05
+	~	 [0,0.5,0.01]
+	~		|
+
+Wolves= INTEG (
+	increase in wolves-decrease in wolves,
+		5)
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 48
+	~	Month
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Month
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP 
+	~	Month [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 0.03125
+	~	Month [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|72,72,100,0
+10,1,rabbits,502,207,40,20,3,3,0,0,0,0,0,0
+10,2,Wolves,481,402,40,20,3,3,0,0,0,0,0,0
+12,3,48,189,205,10,8,0,3,0,0,-1,0,0,0
+1,5,7,1,4,0,0,22,0,0,0,-1--1--1,,1|(396,205)|
+1,6,7,3,100,0,0,22,0,0,0,-1--1--1,,1|(258,205)|
+11,7,0,324,205,6,8,34,3,0,0,1,0,0,0
+10,8,increase in rabbits,324,221,46,8,40,3,0,0,-1,0,0,0
+12,10,48,746,203,10,8,0,3,0,0,-1,0,0,0
+12,16,48,198,407,10,8,0,3,0,0,-1,0,0,0
+1,18,20,2,4,0,0,22,0,0,0,-1--1--1,,1|(385,407)|
+1,19,20,16,100,0,0,22,0,0,0,-1--1--1,,1|(263,407)|
+11,20,0,324,407,6,8,34,3,0,0,1,0,0,0
+10,21,increase in wolves,324,423,47,8,40,3,0,0,-1,0,0,0
+12,22,48,743,401,10,8,0,3,0,0,-1,0,0,0
+1,24,26,22,4,0,0,22,0,0,0,-1--1--1,,1|(683,401)|
+1,25,26,2,100,0,0,22,0,0,0,-1--1--1,,1|(571,401)|
+11,26,0,627,401,6,8,34,3,0,0,1,0,0,0
+10,27,decrease in wolves,627,417,48,8,40,3,0,0,-1,0,0,0
+10,28,rabbit birth factor,265,299,45,8,8,3,0,0,0,0,0,0
+10,29,rabbit death factor,607,284,46,8,8,3,0,0,0,0,0,0
+10,30,wolf birth factor,239,527,42,8,8,3,0,0,0,0,0,0
+10,31,wolf death factor,629,518,43,8,8,3,0,0,0,0,0,0
+1,32,28,8,0,0,0,0,0,64,0,-1--1--1,,1|(289,265)|
+1,33,1,8,1,0,0,0,0,64,0,-1--1--1,,1|(416,287)|
+1,37,39,10,4,0,0,22,0,0,0,-1--1--1,,1|(690,203)|
+1,38,39,1,100,0,0,22,0,0,0,-1--1--1,,1|(587,203)|
+11,39,0,639,203,6,8,34,3,0,0,1,0,0,0
+10,40,decrease in rabbits,639,219,47,8,40,3,0,0,-1,0,0,0
+1,41,29,40,0,0,0,0,0,64,0,-1--1--1,,1|(619,257)|
+1,42,1,40,1,0,0,0,0,64,0,-1--1--1,,1|(556,243)|
+1,43,30,21,0,0,0,0,0,64,0,-1--1--1,,1|(276,480)|
+1,44,2,21,1,0,0,0,0,64,0,-1--1--1,,1|(415,460)|
+1,45,2,27,1,0,0,0,0,64,0,-1--1--1,,1|(524,451)|
+1,46,31,27,0,0,0,0,0,64,0,-1--1--1,,1|(628,474)|
+1,47,2,40,0,0,0,0,0,64,0,-1--1--1,,1|(560,309)|
+1,48,1,21,0,0,0,0,0,64,0,-1--1--1,,1|(412,315)|
+12,49,16971184,1195,342,150,150,3,12,0,0,1,0,0,0
+Predator_and_Prey
+///---\\\
+:GRAPH Predator_and_Prey
+:TITLE Predator and Prey
+:X-AXIS Time
+:SCALE
+:VAR rabbits
+:Y-MIN 0
+:Y-MAX 100
+:VAR Wolves
+:L<%^E!@
+1:Current.vdf
+9:Current
+22:$,Dollar,Dollars,$s
+22:Hour,Hours
+22:Month,Months
+22:Person,People,Persons
+22:Unit,Units
+22:Week,Weeks
+22:Year,Years
+22:Day,Days
+23:0
+15:0,0,0,0,0,0
+19:100,0
+27:2,
+34:0,
+4:Time
+5:rabbits
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:2
+41:0
+42:1
+24:0
+25:48
+26:48

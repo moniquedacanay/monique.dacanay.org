@@ -1,0 +1,62 @@
+header {
+  background-color: DarkTurquoise ;
+  border: 2px solid black;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  color: Black;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+nav {
+  background-color:DeepPink ;
+  border: 2px solid black;
+}
+
+nav ul {
+  background-color: Black;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav ul li {
+  background-color: Wheat;
+  border: 2px solid black;
+  width: 25%;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  margin-left: 5%;
+}
+
+main {
+  background-color: light-gray;
+  border: 2px solid black;
+  padding: 2%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 3px;
+}
+
+th {
+  background-color: DarkTurquoise;
+}
+
+.vensim-download {
+  display: block;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: DarkTurquoise;
+  border: 2px solid black;
+  text-align: right;
+  padding-right: 25px;
+}

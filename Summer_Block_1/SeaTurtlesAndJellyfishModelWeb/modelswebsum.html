@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<!-- Look for comments like this one for instructions on how to complete -->
+<!-- this template. -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Jellyfish and Sea turtles: Overview</title>
+    <link href="mainsea.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <h1>Sea Life</h1>
+      <h2>Overview</h2>
+      <img src="web_pics/Sea_turtle_and_Jellyfish.jpg" style="width:300px;height:200px;"  alt="Sea Turtle and Jellyfish">
+      <img src="web_pics/Plastic.png" style="width:300px;height:200px;"  alt="Plastic">
+    
+    </header>
+    <nav>
+      <ul>
+        <li>Overview</li>
+        <li><a href="agentcubes.html">AgentCubes Model</a></li>
+        <li><a href="vensimsea.html">Vensim Model</a></li>
+      </ul>
+    </nav>
+    <main>
+    
+    <section>
+        <h1><a href="https://docs.google.com/document/d/14_HyaDN8aWxDKOXr5PbAw3qu_0Ticq5isY1AZAxFJ0s/edit"
+          target="_blank">Link to HLD</a></h1>
+      </section>
+      
+      <section>
+        <h1>Model Description</h1>
+        <p>This project models the sea life of sea turtles and jellyfish. Two versions of the project were
+        created; the first uses AgentCubes, and the second uses Vensim. </p>
+      </section>
+      
+      <section>
+        <h1>The Story</h1>
+
+        <!-- Write the model story into the paragraph below. Make sure the -->
+        <!-- story includes your extension. -->
+        <p>If a jellyfish (pink square) is one of the nearest-neighbors of a sea turtle 
+        (green square), it will test the wave direction (a simulation property, WAVE_DIRECTION 
+        -- 0 means north, 1 means south, 2 means east, 3 means west). If the jellyfish is 
+        downward from the sea turtle, there is some percent chance (simulation property, 
+        HIGH_PCT_CHANCE) that the jellyfish will be eaten by the sea turtle. If the jellyfish 
+        is NOT downward from the sea turtle, there is a different percent chance (simulation 
+        property, LOW_PCT_CHANCE) that the jellyfish will still be eaten by the sea turtle.
+         
+        Also, plastic (gray square) can appear in the world caused by human littering 
+        (humans not actually shown in the model). If the sea turtle eats or comes in contact 
+        with the plastic, then there is some percent chance, (simulation property, DEATH_PCT_CHANCE) 
+        that the sea turtle will die or disappear from the ocean. 
+        
+        If a jellyfish is next to another jellyfish, there is some percent chance, (simulation 
+        property, REPRODUCTION_PCT_CHANCE), that another jellyfish will be born, or appear in the 
+        ocean.
+        
+        If a sea turtle is next to another sea turtle, there is some percent chance, (simulation 
+        property, REPRODUCTION_PCT_CHANCE), that another sea turtle will be born, or appear in the 
+        ocean.
+		
+		Plastic appears randomly in the ocean.
+		
+		Plastic moves randomly in the ocean.
+		
+		Jellyfish moves randomly in the ocean.
+		
+		Sea turtles move towards jellyfish and plastic, when hungry.
+		
+		A counter (purple square) counts the number of sea turtles, jellyfish, and plastic there 
+		is in the ocean, and graphs the population sizes.
+
+To change any of the simulation properties, click the gear button at the top left part of 
+the screen. Then, in the menu that appears, click show simulation properties. In the 
+simulation dialog box, you can change any values and you can see what are the properties, 
+in which affect the model.
+
+</p>
+
+      </section>
+      <section>
+        <h1>Agents and their colors</h1>
+
+        <!-- Change the content of this table to match your model -->
+        <table>
+          <thead>
+            <tr>
+              <th>Agent</th>
+             <th></th>
+              <th>Color</th>
+            </tr>
+          </thead>
+          <tbody>
+           
+             <tr>
+              <td>Sea Turtle</td>
+              <td></td>
+              <td>Green</td>
+            </tr>
+            
+            <tr>
+              <td>Jellyfish</td>
+              <td></td>
+              <td>Pink</td>
+            </tr>
+            <tr>
+              <td>Ocean</td>
+              <td></td>
+              <td>Blue</td>
+            </tr>
+            <tr>
+              <td>Plastic</td>
+              <td></td>
+              <td>Gray</td>
+            </tr>
+            <tr>
+              <td>Counter</td>
+              <td></td>
+              <td>Purple</td>
+            </tr>
+            
+            
+            
+          </tbody>
+        </table>
+        
+      </section>
+      <section>
+        <h1>Observed Behaviors</h1>
+
+        <!-- Explain the behaviors of the overall system and the graph. -->
+        <!-- Focus on what you can see the system doing and why you think -->
+        <!-- it is doing it and what you can see the graph is doing and why -->
+        <!-- you think it is doing it. -->
+        <p>In the models, jellyfish and sea turtles swim in the ocean. When hungry, sea turtles try to
+        look for jellyfish, but sometimes, accidentally eat plastic instead. If they do eat the 
+        plastic or they come in contact with it, there is a percent chance that they will die.
+        Also, jellyfish can give birth to more jellyfish, when they come in contact with another 
+        jellyfish. In the same way, sea turtles can give birth to more sea turtles, when they interact
+        with other sea turtles. These models show how both populations depend on each other, 
+        and affect each other in many ways. In the graph, you can see that one population would rise,
+        while the other would fall, and the opposite would also later occur. The other population
+        would start to rise, while the first population would fall. For example, if the sea turtle
+        population rose, then this would cause the jellyfish population to decrease. Eventually,
+        the sea turtle population would compete with each other for food (jellyfish), and their 
+        population would decrease, because of natural selection. When the sea turtle population decreased,
+        the jellyfish population would increase again, because of lack of predators. This would cycle, 
+        with both populations going up and down. In the models, the jellyfish and plastic bags, would
+        move randomly in the world, while the sea turtles would hunt for them (jellyfish and plastic bags). 
+        Like in the real world, sea turtles may mistakenly eat a plastic bag, thinking it was 
+        jellyfish, since they both look very similar to each other. In addition, in this model,
+        plastic appears randomly in the ocean (caused by human littering).   </p>
+
+      </section>
+      <section>
+        <h1>Nearest-Neighbors </h1>
+
+        <!-- Explain how you ensured that only the nearest neighbors burn -->
+        <!-- in a single time step, rather than a large chunk of the forest. -->
+        <p>I ensured that only the nearest neighbors get eaten, by broadcasting a jellyfish check and 
+        change. This makes it so that only the nearest neighbors get eaten, because in one time 
+        step, instead of seeing that the sea turtles are beside jellyfish and eating them, or 
+        making them disappear, it sets the food of the jellyfish beside the sea turtle 
+        to one, then after, in the broadcast jellyfish change, it will test if the food of the 
+        jellyfish is set to one. If it is, then the jellyfish will then get eaten by the sea 
+        turtle. This prevents too many jellyfish, or in other words, only the nearest neighbors 
+        to get eaten by sea turtles. This is very important in making only those jellyfish right beside the 
+        sea turtle(s) to get eaten. </p>
+
+      </section>
+      <section>
+        <h1>Conclusions</h1>
+
+        <!-- Explain what you learned from this project about forest fires, -->
+        <!-- modeling, programming, and anything else you learned. -->
+        <p>I learned that two or more populations can greatly affect each other. Like stated before,
+        if the sea turtle population rose, then this would cause the jellyfish population to
+        decrease. Later, competition between many sea turtles will result in the decrease of
+        sea turtles, and the increase of jellyfish. This would cycle continuously, having one
+        population rise, and the other fall. I also learned that many different factors can 
+        result in the deaths of different organisms. For example, the plastic bags in these models
+        hurt the sea turtle populations and made them decrease. In research, other factors like 
+        starvation, old age, body injury, suffocation, and other things can result in the deaths
+        of organisms.</p>
+
+      </section>
+      
+       <section>
+        <h1>Citation</h1>
+
+        <p>Palermo, Elizabeth. “What Do Turtles Eat?” LiveScience, Purch, 12 May 2014,
+        www.livescience.com/45539-what-do-turtles-eat.html.</p>
+        <br>
+        <p>“Sea Turtle Diet.” SEE Turtles, www.seeturtles.org/sea-turtle-diet/</p>
+		<br>
+		<p>SeaWorld Parks & Entertainment. “Longevity & Causes of Death.” Animals: Explore. 
+		Discover. Connect., seaworld.org/animal-info/animal-infobooks/sea-turtles/longevity-and-causes-of-death.</p>
+      </section>
+    </main>
+    <footer>
+
+      <!-- Replace the names below with your names. -->
+      <h5>By Monique Armelle Z. Dacanay</h5>
+
+    </footer>
+  </body>
+</html>

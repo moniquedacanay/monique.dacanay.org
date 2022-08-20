@@ -1,0 +1,49 @@
+/* Please do not change the styles below, but please feel free to change
+   background colors, border colors, and border sizes.
+*/
+
+header {
+  background-color: LightSteelBlue;
+  border: 2px solid black;
+  text-align: center;
+}
+
+nav {
+  background-color: SteelBlue;
+  border: 2px solid black;
+}
+
+nav ul {
+  background-color: SteelBlue;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav ul li {
+  background-color: Wheat;
+  border: 2px solid black;
+  width: 25%;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  margin-left: 5%;
+}
+
+main {
+  background-color: light-gray;
+  border: 2px solid black;
+  padding: 2%;
+}
+
+.vensim-download {
+  display: block;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: SteelBlue;
+  border: 2px solid black;
+  text-align: right;
+  padding-right: 25px;
+}

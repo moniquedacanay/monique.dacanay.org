@@ -1,0 +1,57 @@
+ul {
+	list-style-type: none;
+}
+div #flex_design{
+    padding: 5px;
+    
+}
+
+/* 2 Column layout*/
+.flex_design{
+	display: flex;
+}
+
+/*Header CSS*/
+header{
+    border: 5px solid aqua;
+    margin: 10px;
+    background-color: LightCyan;
+    background-image: url("../../Pics/rainbowsq.png"); 
+    font-family: Arial, Helvetica, sans-serif;
+    color: MediumVioletRed;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+/*Navigation CSS*/
+nav {
+    border: 5px solid aqua;
+    width: 25%;
+    margin: 10px;
+    background-color: LightCyan;
+    font-family: Arial, Helvetica, sans-serif;
+    color: MediumVioletRed;
+    font-size: 19px;
+}
+
+/*Main CSS. Where all our content will go*/
+main {
+    border: 5px solid aqua;
+    width: 75%;
+    margin: 10px;
+    background-color: LightCyan;
+    font-family: Arial, Helvetica, sans-serif;
+    color: MediumVioletRed;
+    font-size: 19px;
+    overflow: auto; 
+	height: 500px;
+}
+
+/*Footer CSS*/
+footer {
+    border: 5px solid aqua;
+    margin: 10px;
+    background-color: LightCyan;
+    font-family: Arial, Helvetica, sans-serif;
+    color: MediumVioletRed;
+}

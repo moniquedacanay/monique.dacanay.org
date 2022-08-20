@@ -1,0 +1,171 @@
+{UTF-8}
+Decrease in Jellyfish=
+	Jellyfish*Jellyfish Death Factor*Sea Turtles
+	~	
+	~		|
+
+Decrease in Sea Turtles=
+	Plastic*Sea Turtles*Sea Turtles Death Factor
+	~	
+	~		|
+
+Human Littering=
+	0.01
+	~	 [0,0.1,0.001]
+	~		|
+
+Increase in Jellyfish=
+	Jellyfish*Jellyfish Birth Factor
+	~	
+	~		|
+
+Increase in Plastic=
+	Human Littering
+	~	
+	~		|
+
+Increase in Sea Turtles=
+	Jellyfish*Sea Turtles*Sea Turtles Birth Factor
+	~	
+	~		|
+
+Jellyfish= INTEG (
+	Increase in Jellyfish-Decrease in Jellyfish,
+		100)
+	~	
+	~		|
+
+Jellyfish Birth Factor=
+	0.05
+	~	 [0,0.05,0.01]
+	~		|
+
+Jellyfish Death Factor=
+	0.001
+	~	 [0,0.001,0.0001]
+	~		|
+
+Plastic= INTEG (
+	Increase in Plastic,
+		3)
+	~	
+	~		|
+
+Sea Turtles= INTEG (
+	Increase in Sea Turtles-Decrease in Sea Turtles,
+		10)
+	~	
+	~		|
+
+Sea Turtles Birth Factor=
+	0.001
+	~	 [0,0.001,0.0001]
+	~		|
+
+Sea Turtles Death Factor=
+	0.05
+	~	 [0,0.05,0.01]
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 100
+	~	Month
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Month
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	Month [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Month [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|72,72,100,0
+10,1,Jellyfish,439,146,40,20,3,3,0,0,0,0,0,0
+10,2,Sea Turtles,439,315,40,20,3,3,0,0,0,0,0,0
+10,3,Plastic,432,486,40,20,3,3,0,0,0,0,0,0
+12,4,48,234,137,10,8,0,3,0,0,-1,0,0,0
+1,5,7,1,4,0,0,22,0,0,0,-1--1--1,,1|(363,137)|
+1,6,7,4,100,0,0,22,0,0,0,-1--1--1,,1|(279,137)|
+11,7,48,321,137,6,8,34,3,0,0,1,0,0,0
+10,8,Increase in Jellyfish,321,153,50,8,40,3,0,0,-1,0,0,0
+12,9,48,225,308,10,8,0,3,0,0,-1,0,0,0
+1,10,12,2,4,0,0,22,0,0,0,-1--1--1,,1|(361,308)|
+1,11,12,9,100,0,0,22,0,0,0,-1--1--1,,1|(273,308)|
+11,12,48,317,308,6,8,34,3,0,0,1,0,0,0
+10,13,Increase in Sea Turtles,317,324,57,8,40,3,0,0,-1,0,0,0
+12,14,48,219,489,10,8,0,3,0,0,-1,0,0,0
+1,15,17,3,4,0,0,22,0,0,0,-1--1--1,,1|(354,489)|
+1,16,17,14,100,0,0,22,0,0,0,-1--1--1,,1|(266,489)|
+11,17,48,310,489,6,8,34,3,0,0,1,0,0,0
+10,18,Increase in Plastic,310,505,46,8,40,3,0,0,-1,0,0,0
+12,19,48,651,142,10,8,0,3,0,0,-1,0,0,0
+1,20,22,19,4,0,0,22,0,0,0,-1--1--1,,1|(603,142)|
+1,21,22,1,100,0,0,22,0,0,0,-1--1--1,,1|(516,142)|
+11,22,48,560,142,6,8,34,3,0,0,1,0,0,0
+10,23,Decrease in Jellyfish,560,158,52,8,40,3,0,0,-1,0,0,0
+12,24,48,656,314,10,8,0,3,0,0,-1,0,0,0
+1,25,27,24,4,0,0,22,0,0,0,-1--1--1,,1|(607,314)|
+1,26,27,2,100,0,0,22,0,0,0,-1--1--1,,1|(517,314)|
+11,27,48,562,314,6,8,34,3,0,0,1,0,0,0
+10,28,Decrease in Sea Turtles,562,330,59,8,40,3,0,0,-1,0,0,0
+1,29,1,13,0,0,0,0,0,64,0,-1--1--1,,1|(377,235)|
+1,30,2,22,0,0,0,0,0,64,0,-1--1--1,,1|(499,226)|
+1,31,3,28,0,0,0,0,0,64,0,-1--1--1,,1|(497,407)|
+1,32,2,12,1,0,0,0,0,64,0,-1--1--1,,1|(343,344)|
+1,33,2,28,1,0,0,0,0,64,0,-1--1--1,,1|(492,352)|
+1,34,1,8,1,0,0,0,0,64,0,-1--1--1,,1|(353,175)|
+1,35,1,23,1,0,0,0,0,64,0,-1--1--1,,1|(495,166)|
+10,36,Jellyfish Birth Factor,178,196,53,8,8,3,0,0,0,0,0,0
+10,37,Sea Turtles Birth Factor,157,379,60,8,8,3,0,0,0,0,0,0
+10,38,Human Littering,123,535,42,8,8,3,0,0,0,0,0,0
+1,39,36,8,0,0,0,0,0,64,0,-1--1--1,,1|(242,176)|
+1,40,37,13,0,0,0,0,0,64,0,-1--1--1,,1|(229,353)|
+1,41,38,18,0,0,0,0,0,64,0,-1--1--1,,1|(207,521)|
+10,42,Jellyfish Death Factor,627,208,55,8,8,3,0,0,0,0,0,0
+10,43,Sea Turtles Death Factor,619,393,46,14,8,3,0,0,0,0,0,0
+1,44,42,23,0,0,0,0,0,64,0,-1--1--1,,1|(599,187)|
+1,45,43,28,0,0,0,0,0,64,0,-1--1--1,,1|(592,363)|
+12,46,0,860,298,150,150,3,44,0,0,1,0,0,0
+Sea_Turtle_and_Jellyfish_Populations
+///---\\\
+:GRAPH Sea_Turtle_and_Jellyfish_Populations
+:TITLE Sea Turtle and Jellyfish Populations
+:X-AXIS Time
+:SCALE
+:VAR Sea Turtles
+:LINE-WIDTH 2
+:VAR Jellyfish
+:LINE-WIDTH 2
+:VAR Plastic
+:LINE-WIDTH 2
+:L<%^E!@
+1:Current.vdf
+9:Current
+23:0
+15:0,0,0,0,0,0
+19:100,0
+27:2,
+34:0,
+4:Time
+5:Sea Turtles Death Factor
+24:0
+25:100
+26:100

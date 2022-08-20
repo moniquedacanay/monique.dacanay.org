@@ -1,0 +1,15 @@
+Please use this folder as a template for your group project. All group members
+should do the following:
+
+1. Upload this folder to your public_html folder on the Shodor login server.
+2. Make sure the website appears when you go to the following page (replace
+   yourusername with your Shodor username):
+   http://shodor.org/~yourusername/groupProject1
+3. Open the three .html files in a text editor (e.g. Atom or TextWrangler) and
+   follow the instructions written in comments (lines that start with <!--).
+4. As you make changes, make sure you upload them back to the server and test
+   them by refreshing http://shodor.org/~yourusername/groupProject1
+5. If you wish to change the colors and/or border sizes of the website you can
+   do so in the main.css file.
+6. The .png and .mdl files are just provided as examples; you should replace
+   these with your own.

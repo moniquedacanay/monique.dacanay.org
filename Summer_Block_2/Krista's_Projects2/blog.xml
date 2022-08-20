@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- eXtensible Markup Language -->
+<!-- designed to be self-descriptive -->
+
+<blog>
+  <title>Monique's XML Blog Page</title>
+  <description>My name is Monique Armelle Z. Dacanay</description>
+  <item>
+    <title>About me</title>
+    <description>
+      I am a rising sophomore at Leesville Road High School. I love swimming,
+      playing badminton, drawing, playing the violin, and spending time with my family. 
+    </description>
+  </item>
+  <item>
+    <title>About Shodor</title>
+    <description>
+      Shodor is a nonprofit organization serving students and educators by 
+      providing materials and instruction relating to computational science 
+      (scientific, interactive computing).  
+      
+      I am currently an apprentice at Shodor. My amazing mentor is Mr. Aaron.
+    </description>
+  </item>
+</blog>

@@ -1,0 +1,147 @@
+{UTF-8}
+Bad weather factor=
+	0.05
+	~	 [0,0.05,0.01]
+	~		|
+
+Decrease in fish=
+	Fish*Fish death factor*Fishermen
+	~	
+	~		|
+
+Decrease in fishermen=
+	Bad weather factor*Fishermen
+	~	
+	~		|
+
+Fish= INTEG (
+	Increase in fish-Decrease in fish,
+		100)
+	~	
+	~		|
+
+Fish birth factor=
+	0.05
+	~	 [0,0.05,0.01]
+	~		|
+
+Fish death factor=
+	0.001
+	~	 [0,0.001,0.0001]
+	~		|
+
+Fishermen= INTEG (
+	Increase in fishermen-Decrease in fishermen,
+		10)
+	~	
+	~		|
+
+Good weather factor=
+	0.001
+	~	 [0,0.001,0.0001]
+	~		|
+
+Increase in fish=
+	Fish birth factor*Fish
+	~	
+	~		|
+
+Increase in fishermen=
+	Fish*Fishermen*Good weather factor
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 100
+	~	Month
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Month
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP 
+	~	Month [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Month [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|72,72,100,0
+10,1,Fish,606,211,40,20,3,3,0,0,0,0,0,0
+10,2,Fishermen,576,411,40,20,3,3,0,0,0,0,0,0
+12,3,48,361,199,10,8,0,3,0,0,-1,0,0,0
+1,5,7,1,4,0,0,22,0,0,0,-1--1--1,,1|(518,199)|
+1,6,7,3,100,0,0,22,0,0,0,-1--1--1,,1|(415,199)|
+11,7,0,465,199,6,8,34,3,0,0,1,0,0,0
+10,8,Increase in fish,465,215,39,8,40,3,0,0,-1,0,0,0
+12,9,48,867,205,10,8,0,3,0,0,-1,0,0,0
+1,11,13,9,4,0,0,22,0,0,0,-1--1--1,,1|(807,205)|
+1,12,13,1,100,0,0,22,0,0,0,-1--1--1,,1|(695,205)|
+11,13,0,751,205,6,8,34,3,0,0,1,0,0,0
+10,14,Decrease in fish,751,221,41,8,40,3,0,0,-1,0,0,0
+12,15,48,324,410,10,8,0,3,0,0,-1,0,0,0
+1,17,19,2,4,0,0,22,0,0,0,-1--1--1,,1|(488,410)|
+1,18,19,15,100,0,0,22,0,0,0,-1--1--1,,1|(381,410)|
+11,19,0,435,410,6,8,34,3,0,0,1,0,0,0
+10,20,Increase in fishermen,435,426,54,8,40,3,0,0,-1,0,0,0
+12,21,48,852,409,10,8,0,3,0,0,-1,0,0,0
+1,23,25,21,4,0,0,22,0,0,0,-1--1--1,,1|(788,409)|
+1,24,25,2,100,0,0,22,0,0,0,-1--1--1,,1|(669,409)|
+11,25,0,729,409,6,8,34,3,0,0,1,0,0,0
+10,26,Decrease in fishermen,729,425,56,8,40,3,0,0,-1,0,0,0
+10,27,Fish birth factor,275,283,41,8,8,3,0,0,0,0,0,0
+10,28,Fish death factor,864,281,43,8,8,3,0,0,0,0,0,0
+10,29,Good weather factor,194,525,52,8,8,3,0,0,0,0,0,0
+10,30,Bad weather factor,871,525,48,8,8,3,0,0,0,0,0,0
+1,31,1,8,1,0,0,0,0,64,0,-1--1--1,,1|(518,280)|
+1,32,1,14,1,0,0,0,0,64,0,-1--1--1,,1|(663,257)|
+1,33,27,8,0,0,0,0,0,64,0,-1--1--1,,1|(362,251)|
+1,34,28,14,0,0,0,0,0,64,0,-1--1--1,,1|(813,254)|
+1,35,30,26,0,0,0,0,0,64,0,-1--1--1,,1|(805,479)|
+1,36,29,20,0,0,0,0,0,64,0,-1--1--1,,1|(307,478)|
+1,37,2,19,1,0,0,0,0,64,0,-1--1--1,,1|(505,482)|
+1,38,2,26,1,0,0,0,0,64,0,-1--1--1,,1|(622,439)|
+1,39,1,20,0,0,0,0,0,64,0,-1--1--1,,1|(520,319)|
+1,40,2,14,0,0,0,0,0,64,0,-1--1--1,,1|(663,315)|
+1,42,41,14,0,0,0,0,0,64,0,-1--1--1,,1|(673,138)|
+12,43,0,1236,332,150,150,3,44,0,0,1,0,0,0
+Fish_and_Fishermen_Syste
+///---\\\
+:GRAPH Fish_and_Fishermen_Syste
+:TITLE Fish and Fishermen System Model Step #1
+:X-AXIS Time
+:SCALE
+:VAR Fish
+:Y-MIN 0
+:Y-MAX 100
+:LINE-WIDTH 2
+:SCALE
+:VAR Fishermen
+:L<%^E!@
+1:Current.vdf
+9:Current
+23:0
+15:0,0,0,0,0,0
+19:100,0
+27:2,
+34:0,
+4:Time
+5:Decrease in fish
+24:0
+25:100
+26:100
